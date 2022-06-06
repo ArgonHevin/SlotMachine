@@ -20,9 +20,9 @@
         WebGL builds are not supported on mobile devices.
       </div>
       <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">SlotMachine</div>
+        <!-- <div id="unity-webgl-logo"></div> -->
+        <!-- <div id="unity-fullscreen-button"></div> -->
+        <!-- <div id="unity-build-title">SlotMachine</div> -->
       </div>
     </div>
     <script>
@@ -62,8 +62,8 @@
           mobileWarning.style.display = "none";
         }, 5000);
       } else {
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width = "100vw";
+        canvas.style.height = "100vh";
       }
       canvas.style.background = "url('" + buildUrl + "/WebGl.jpg') center / cover";
       loadingBar.style.display = "block";
@@ -75,9 +75,9 @@
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
           loadingBar.style.display = "none";
-          fullscreenButton.onclick = () => {
-            unityInstance.SetFullscreen(1);
-          };
+          // fullscreenButton.onclick = () => {
+          //   unityInstance.SetFullscreen(1);
+          // };
         }).catch((message) => {
           alert(message);
         });
